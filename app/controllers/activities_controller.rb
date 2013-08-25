@@ -1,6 +1,11 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
+  # GET /
+  def show_hello
+    @activities = Activity.all
+  end
+
   # GET /activities
   # GET /activities.json
   def index
@@ -11,6 +16,15 @@ class ActivitiesController < ApplicationController
   # GET /activities/1.json
   def show
   end
+
+  def show_random
+    @activity = Activity.all[rand(Activity.count)]
+    render :show
+  end
+
+def antics
+  @activity = Activity.antics 
+end 
 
   # GET /activities/new
   def new
@@ -69,6 +83,6 @@ class ActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.require(:activity).permit(:name, :integer, :description, :location, :time)
+      params.require(:activity).permit(:name, :category_id, :description, :location, :time)
     end
 end

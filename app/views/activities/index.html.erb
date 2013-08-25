@@ -1,10 +1,10 @@
-<h1>Listing activities</h1>
+<h1>Here are your options....</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Integer</th>
+      <th>Category</th>
       <th>Description</th>
       <th>Location</th>
       <th>Time</th>
@@ -18,7 +18,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td><%= activity.name %></td>
-        <td><%= activity.integer %></td>
+        <td><%= activity.category_id %></td>
         <td><%= activity.description %></td>
         <td><%= activity.location %></td>
         <td><%= activity.time %></td>

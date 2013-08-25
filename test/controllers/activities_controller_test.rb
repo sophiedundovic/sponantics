@@ -18,7 +18,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "should create activity" do
     assert_difference('Activity.count') do
-      post :create, activity: { description: @activity.description, integer: @activity.integer, location: @activity.location, name: @activity.name, time: @activity.time }
+      post :create, activity: { category_id: @activity.category_id, description: @activity.description, location: @activity.location, name: @activity.name, time: @activity.time }
     end
 
     assert_redirected_to activity_path(assigns(:activity))
@@ -35,7 +35,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should update activity" do
-    patch :update, id: @activity, activity: { description: @activity.description, integer: @activity.integer, location: @activity.location, name: @activity.name, time: @activity.time }
+    patch :update, id: @activity, activity: { category_id: @activity.category_id, description: @activity.description, location: @activity.location, name: @activity.name, time: @activity.time }
     assert_redirected_to activity_path(assigns(:activity))
   end
 

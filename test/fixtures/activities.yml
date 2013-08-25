@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  integer: MyString
+  category_id: 1
   description: MyText
   location: MyString
   time: MyString
 
 two:
   name: MyString
-  integer: MyString
+  category_id: 1
   description: MyText
   location: MyString
   time: MyString
